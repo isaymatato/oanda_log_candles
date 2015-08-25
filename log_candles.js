@@ -121,11 +121,6 @@ Tengu(function(T) {
     //Get list of collections to log
     var collections = getCollectionNames(params.instruments,params.granularities);
 
-
-    //get oanda data (paged)
-    //log data to db as it comes in (see oanda_test.js)
-
-
     async.series([
 			function(cb) {
         console.log('Connecting to DB');
