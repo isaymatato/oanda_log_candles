@@ -1,5 +1,4 @@
 #Oanada Log Candles 
-========
 
 Pulls historical data from Oanda and logs it into MongoDB for faster reference.  Useful for backtesting.
 
