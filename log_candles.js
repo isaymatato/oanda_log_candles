@@ -101,8 +101,6 @@ Tengu(function(T) {
   var connect = function(databaseUrl,callback) {
     db = Mongo.connect(databaseUrl);
 
-    //T.logObject(db);
-
     // db.on('error', function (err) {
     // 	console.log('Database Error', err)
     // 	callback(err);
