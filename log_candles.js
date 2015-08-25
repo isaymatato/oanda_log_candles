@@ -58,7 +58,7 @@ Tengu(function(T) {
 				function(e,d) {
   callback(e,d);
 				});
-    })
+    });
   };
 
   var registerCollections = function(collections,callback) {
