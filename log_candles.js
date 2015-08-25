@@ -16,12 +16,12 @@ Tengu(function(T) {
     g = granularities,
     c = [],
     i,j;
+    //For every instrument and granularity combo, pushes string of <INSTRUMENT>_<GRANULARITY>
     for (i in n) {
       for (j in g) {
         c.push(n[i] + '_' + g[j]);
       }
     }
-
     return c;
   };
 
@@ -128,21 +128,21 @@ Tengu(function(T) {
 
     async.series([
 			function(cb) {
-  console.log('Connecting to DB');
-  connect(params.databaseUrl,cb);
+        console.log('Connecting to DB');
+        connect(params.databaseUrl,cb);
 			},
-		    function(cb) {
-  console.log('Creating collections');
-  createCollections(collections,cb);
-		    },
-		    function(cb) {
-  console.log('Registering collections to DB');
-  registerCollections(collections,cb);
-		    },
-		    function(cb) {
-  console.log('Logging the data...');
-  logOandaCandles(params,cb);
-		    },
+	    function(cb) {
+        console.log('Creating collections');
+        createCollections(collections,cb);
+	    },
+	    function(cb) {
+        console.log('Registering collections to DB');
+        registerCollections(collections,cb);
+	    },
+	    function(cb) {
+        console.log('Logging the data...');
+        logOandaCandles(params,cb);
+	    },
 		],
 		function(e,dd) {
   db.close();

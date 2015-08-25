@@ -5,6 +5,7 @@ var db;
 
 var OANDAAdapter = require('oanda-adapter');
 
+//Your keys hereVVVV
 var apiKey = 'xxxxx',
 	accountId = 'xxx',
 	accountMt4 = 'xxxxx';
@@ -222,14 +223,6 @@ Tengu(function(T) {
 
     async.doUntil(fn, test, callback);
   };
-
-  // console.log('getting candles');
-  // getPagedCandles({
-  // 	instrument: "GBP_USD",
-  // 	granularity: "M5"
-  // }, function(){
-  // 	console.log('All Done! :)');
-  // });
 
   //Node export
   if (typeof module != 'undefined') {
